@@ -5,6 +5,8 @@
 <set name="mobile"/>
 <app preloader="NMEPreloader" />
 <set name="gradle.manifestMerger" value="false" />
+	<set name="gradle.version" value="8.0" />
+<set name="gradle.android-plugin-version" value="7.4.2" />
 	
 	<!-- _________________________ Application Settings _________________________ -->
 
