@@ -43,18 +43,15 @@ jobs:
           haxelib install flixel-ui
           haxelib install tjson 1.4.0
           haxelib install hscript
-          haxelib install hxdiscord_rpc 1.2.4
           haxelib install flxanimate
           haxelib install extension-androidtools
           haxelib run lime setup -y
           haxelib run lime setup android -y
 
-      - name: Clean Broken Manifest & PCH Cache
+      - name: Clean Build Files
         run: |
-          rm -f export/release/android/bin/app/src/main/AndroidManifest.xml
-          rm -f export/debug/android/bin/app/src/main/AndroidManifest.xml
+          rm -rf export/
           find . -name "*.gch" -type f -delete
-          find . -name "*__pch*" -type d -exec rm -rf {} + || true
 
       - name: Compile Android APK
         run: haxelib run lime build android -D HXCPP_NO_PCH -release
