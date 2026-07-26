@@ -3,6 +3,11 @@
 <define name="HXCPP_NO_PCH" />
 <set name="android"/>
 <set name="mobile"/>
+<app preloader="NMEPreloader" />
+
+<!-- Tambahkan izin Android ini -->
+<android manifestAdditions="&lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot; /&gt;&lt;uses-permission android:name=&quot;android.permission.READ_EXTERNAL_STORAGE&quot; /&gt;" />
+	
 	<!-- _________________________ Application Settings _________________________ -->
 
 	<app title="Friday Night Funkin': Deffoo Engine" file="DeffooEngine" packageName="com.nic.deffooengine" package="com.nic.deffooengine" main="Main" version="0.2.8" company="Nic" />
