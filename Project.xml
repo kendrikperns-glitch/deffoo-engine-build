@@ -4,6 +4,7 @@
 <set name="android"/>
 <set name="mobile"/>
 <app preloader="NMEPreloader" />
+<set name="gradle.manifestMerger" value="false" />
 	
 	<!-- _________________________ Application Settings _________________________ -->
 
