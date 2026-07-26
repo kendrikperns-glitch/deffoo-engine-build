@@ -1,7 +1,7 @@
 package;
 
 #if android
-import android.content.Context;
+// import android.content.Context;
 #end
 
 import debug.FPSCounter;
@@ -76,11 +76,13 @@ class Main extends Sprite
 		#end
 
 		// Credits to MAJigsaw77 (he's the og author for this code)
+			/*
 		#if android
 		Sys.setCwd(Path.addTrailingSlash(Context.getExternalFilesDir()));
 		#elseif ios
 		Sys.setCwd(lime.system.System.applicationStorageDirectory);
 		#end
+*/
 		#if VIDEOS_ALLOWED
 		hxvlc.util.Handle.init(#if (hxvlc >= "1.8.0")  ['--no-lua'] #end);
 		#end
