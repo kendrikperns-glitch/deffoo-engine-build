@@ -49,11 +49,9 @@ jobs:
           haxelib run lime setup -y
           haxelib run lime setup android -y
 
-      - name: Clean Build Files & Remove Discord RPC
+      - name: Clean Build Files
         run: |
           rm -rf export/
-          rm -rf ~/haxelib/hxdiscord_rpc/
-          rm -rf .haxelib/hxdiscord_rpc/
           find . -name "*.gch" -type f -delete
 
       - name: Compile Android APK
