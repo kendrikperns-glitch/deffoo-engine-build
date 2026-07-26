@@ -4,9 +4,6 @@
 <set name="android"/>
 <set name="mobile"/>
 <app preloader="NMEPreloader" />
-
-<!-- Tambahkan izin Android ini -->
-<android manifestAdditions="&lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot; /&gt;&lt;uses-permission android:name=&quot;android.permission.READ_EXTERNAL_STORAGE&quot; /&gt;" />
 	
 	<!-- _________________________ Application Settings _________________________ -->
 
