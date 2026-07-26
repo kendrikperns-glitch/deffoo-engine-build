@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
-	<set name="android"/>
+<set name="android"/>
 <set name="mobile"/>
 	<!-- _________________________ Application Settings _________________________ -->
 
