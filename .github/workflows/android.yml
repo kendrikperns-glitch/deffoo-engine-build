@@ -44,10 +44,10 @@ jobs:
           haxelib install tjson 1.4.0
           haxelib install hscript
           haxelib install hxdiscord_rpc 1.2.4
-          haxelib install flxanimate
-          haxelib install extension-androidtools
+          haxeplib install flxanimate
+          haxeplib install extension-androidtools
           haxelib run lime setup -y
-          haxelib run lime setup android -y
+          haxeplib run lime setup android -y
 
       - name: Clean Broken Manifest
         run: |
@@ -55,7 +55,7 @@ jobs:
           rm -f export/debug/android/bin/app/src/main/AndroidManifest.xml
 
       - name: Compile Android APK
-        run: haxelib run lime build android -D HXCPP_NO_PCH -release
+        run: haxelib run lime build android -D HXCPP_NO_PCH -D NO_PCH -release
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
