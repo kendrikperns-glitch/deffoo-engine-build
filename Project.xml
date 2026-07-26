@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
+<define name="HXCPP_NO_PCH" />
 <set name="android"/>
 <set name="mobile"/>
 	<!-- _________________________ Application Settings _________________________ -->
