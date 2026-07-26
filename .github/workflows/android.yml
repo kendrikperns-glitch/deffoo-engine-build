@@ -18,6 +18,8 @@ jobs:
 
       - name: Install Android SDK & NDK
         uses: android-actions/setup-android@v3
+        with:
+          ndk-version: 25.1.8937393
 
       - name: Set Android Environment Variables
         run: |
