@@ -43,6 +43,7 @@ jobs:
           haxelib install flixel-ui
           haxelib install tjson 1.4.0
           haxelib install hscript
+          haxelib install hxdiscord_rpc 1.2.4
           haxelib install flxanimate
           haxelib install extension-androidtools
           haxelib run lime setup -y
@@ -54,7 +55,7 @@ jobs:
           find . -name "*.gch" -type f -delete
 
       - name: Compile Android APK
-        run: haxelib run lime build android -D HXCPP_NO_PCH -release
+        run: haxelib run lime build android -D HXCPP_NO_PCH -D DISCORD_ALLOWED=false -release
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
