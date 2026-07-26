@@ -49,13 +49,15 @@ jobs:
           haxelib run lime setup -y
           haxelib run lime setup android -y
 
-      - name: Clean Build Files
+      - name: Clean Build Files & Remove Discord RPC
         run: |
           rm -rf export/
+          rm -rf ~/haxelib/hxdiscord_rpc/
+          rm -rf .haxelib/hxdiscord_rpc/
           find . -name "*.gch" -type f -delete
 
       - name: Compile Android APK
-        run: haxelib run lime build android -D HXCPP_NO_PCH -D hxdiscord_rpc -D DISCORD_ALLOWED=false -release
+        run: haxelib run lime build android -D HXCPP_NO_PCH -release
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
