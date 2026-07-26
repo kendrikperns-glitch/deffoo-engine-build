@@ -25,13 +25,13 @@ jobs:
       - name: Install Android SDK & NDK
         uses: android-actions/setup-android@v3
         with:
-          packages: 'ndk;21.4.7075529 platforms;android-30 build-tools;30.0.3'
+          packages: 'ndk;23.1.7779620 platforms;android-30 build-tools;30.0.3'
 
       - name: Set Android Environment Variables
         run: |
           echo "ANDROID_SDK=$ANDROID_HOME" >> $GITHUB_ENV
-          echo "ANDROID_NDK_ROOT=$ANDROID_HOME/ndk/21.4.7075529" >> $GITHUB_ENV
-          echo "$ANDROID_HOME/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64/bin" >> $GITHUB_PATH
+          echo "ANDROID_NDK_ROOT=$ANDROID_HOME/ndk/23.1.7779620" >> $GITHUB_ENV
+          echo "$ANDROID_HOME/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/bin" >> $GITHUB_PATH
 
       - name: Install Haxe Libraries
         run: |
@@ -55,7 +55,7 @@ jobs:
           rm -f export/debug/android/bin/app/src/main/AndroidManifest.xml
 
       - name: Compile Android APK
-        run: haxelib run lime build android -D HXCPP_NO_PCH -release
+        run: haxelib run lime build android -D HXCPP_NO_PCH -D NO_PCH -release
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
