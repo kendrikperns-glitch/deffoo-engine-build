@@ -55,7 +55,7 @@ jobs:
           find . -name "*.gch" -type f -delete
 
       - name: Compile Android APK
-        run: haxelib run lime build android -D HXCPP_NO_PCH -D DISCORD_ALLOWED=false -release
+        run: haxelib run lime build android -D HXCPP_NO_PCH -D hxdiscord_rpc -D DISCORD_ALLOWED=false -release
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
