@@ -35,7 +35,7 @@ jobs:
           haxelib install hxargs
           haxelib install tjson
           haxelib install hscript
-          haxelib install hxdiscord_rpc
+          haxelib install hxdiscord_rpc 1.2.4
           haxelib install flxanimate
           haxelib install extension-androidtools
           haxelib run lime setup -y
